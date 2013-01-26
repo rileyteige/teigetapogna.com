@@ -1,0 +1,2 @@
+addhandler x-httpd-php5-cgi .php5
+addhandler x-httpd-php-cgi .php4

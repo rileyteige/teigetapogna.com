@@ -1,0 +1,92 @@
+<div class="subtitle">
+	Accomodations
+</div>
+
+<div class="content-body">
+	<div id="test">
+	</div>
+	<table id="lodgingsTable">
+	</table>
+</div>
+
+<style media="screen" type="text/css">
+	#lodgingsTable
+	{
+		border-spacing: 30px 10px;
+	}
+
+	.lodgingsTableInfo a
+	{
+		text-decoration: none;
+		font-weight: bold;
+	}
+	
+	.lodgingsTableExtras
+	{
+		max-width: 300px;
+	}
+	
+	#lodgingsTable img
+	{
+		box-shadow: none;
+		border-radius: 0px;
+		width: 200px;
+	}
+</style>
+
+<script>
+
+	function Address(street, city, state, zipCode) {
+		this.street = street;
+		this.city = city;
+		this.state = state;
+		this.zipCode = zipCode;
+		this.toHtml = function() {
+			return this.street + '<br />' + city + ', ' + state + ' ' + zipCode;
+		}
+	}
+
+	function makeLink(content, url) {
+		return url != '' ? '<a href="' + url + '">' + content + '</a>' : '';
+	}
+
+	function makeImage(imageUrl, url) {
+		return makeLink('<img src="' + imageUrl + '"></img>', url);
+	}
+	
+	function addRow(name, url, imageUrl, address, directions, drive, phone, extras) {
+		htmlImage = null;
+		htmlImage = !(imageUrl == null || imageUrl === "") ? makeImage(imageUrl, url) : null;
+		$('#lodgingsTable').append('<tr>' + 
+			'<td class="lodgingsTableInfo">' +
+				makeLink(name, url) + '<br />' +
+				(htmlImage != null ? htmlImage + '<br />' : '') +
+				address + '<br />' +
+				phone + '<br />' +
+			'</td>' +
+			'<td class="lodgingsTableDirections">' +
+				makeLink('Directions to Northstar', directions) + '<br />' +
+				(drive != '' ? '~' : '') + drive + '<br />' +
+			'</td>' +
+			'<td class="lodgingsTableExtras">' +
+				extras +
+			'</td>' +
+			'</tr>');
+	}
+
+	$.getJSON('php/lodgings.php', function(data) {
+		$.each(data, function(key, lodging) {
+			name = lodging['name'];
+			url = lodging['url'];
+			imageUrl = lodging['image'];
+			phone = lodging['phone'];
+			address = lodging['address'];
+			extras = lodging['extras'];
+			directions = lodging['directions'];
+			drive = lodging['drive'];
+			
+			addRow(name, url, imageUrl, new Address(address['street'], address['city'], address['state'], address['zipCode']).toHtml(), directions, drive, phone, extras);
+		});
+	});
+
+</script>

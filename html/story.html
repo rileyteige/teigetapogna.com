@@ -1,0 +1,97 @@
+<div class="subtitle">
+	Our Story
+</div>
+
+<div class="content-body">
+
+	<img id="beginning-image" class="right" src="images/us_on_heliotrope_snow.jpg"></img>
+	
+	<div id="our-story-beginning" class="our-story">
+	</div>
+	
+	<div class="clear"></div>
+	
+	<img id="proposal-image-lead" class="left" src="images/frozen_waterfall.jpg"></img>
+	
+	<div id="our-story-proposal-lead" class="our-story">
+	</div>
+	
+	<div class="clear"></div>
+	
+	<img id="proposal-image-moment" class="right" src="images/before.jpg"></img>
+	
+	<div id="our-story-proposal-moment" class="our-story">
+	</div>
+	
+	<div class="clear"></div>
+	
+	<img id="our-story-ring" src="images/ring.jpg"></img>
+	
+	<div class="clear"></div>
+</div>
+
+<style media="screen" type="text/css">
+	#beginning-image
+	{
+		margin-top: 8px;
+		margin-left: 16px;
+		margin-bottom: 16px;
+	}
+	
+	#proposal-image-lead
+	{
+		margin-top: 8px;
+		margin-right: 16px;
+		margin-bottom: 16px;
+		max-width: 240px;
+	}
+	
+	#proposal-image-moment
+	{
+		margin-top: 8px;
+		margin-left: 16px;
+		margin-bottom: 16px;
+		max-width: 240px;
+	}
+	
+	#our-story-beginning
+	{
+		margin-bottom: 48px;
+	}
+	
+	#our-story-proposal-lead
+	{
+		margin-bottom:16px;
+	}
+	
+	#our-story-ring
+	{
+		max-width: 320px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+</style>
+
+<script>
+	$('.our-story').hide();
+	
+	function showElement(name) {
+		$(name).css({ opacity: 0.0 });
+		$(name).show();
+		$(name).animate({ opacity: 1.0 }, 1000);
+	}
+	
+	$('#our-story-beginning').load('text/our_story_beginning.txt', function() {
+		showElement('#our-story-beginning');
+	});
+	
+	$('#our-story-proposal-lead').load('text/our_story_proposal_lead.txt', function() {
+		showElement('#our-story-proposal-lead');
+	});
+	
+	$('#our-story-proposal-moment').load('text/our_story_proposal_moment.txt', function() {
+		showElement('#our-story-proposal-moment');
+	});
+	
+</script>

@@ -1,0 +1,285 @@
+<div class="subtitle">
+	Bulletin Board
+</div>
+
+<div class="content-body">
+	<div id="questionForm">
+		<form name="question">
+			<fieldset>
+				<div class="inputSet">
+					<label for="name" id="name_label">Name</label>
+					<input type="text" class="text" name="name" id="name" class="text-input" />
+					<label for="name" class="error rightText" id="nameError">You must enter a name.</label>
+				</div>
+				
+				<div class="inputSet">
+					<label for="inquiry" id="inquiry_label">Question/Comment</label>
+					<textarea name="inquiry" class="text" id="inquiry" rows="6" placeholder="Enter question/comment here..." />
+					<label for="inquiry" class="error rightText" id="inquiryError">You cannot submit an empty inquiry.</label>
+				</div>
+				
+				<button type="submit" name="submit" id="submitQuestionButton" class="button large brown"><span>Submit</span></input>
+			</fieldset>
+		</form>
+	</div>
+	
+	<div id="questions">
+	</div>
+</div>
+
+<style media="screen" type="text/css">
+	#questionForm
+	{
+		width: 75%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 32px;
+	}
+	
+	#questionForm .text
+	{
+		border-radius: 8px;
+		border: 0px;
+		padding: 8px;
+		width: 100%;
+		box-shadow: 0px 0px 3px #000;
+		margin-top: 4px;
+		resize: none;
+		box-sizing: padding-box;
+		-ms-box-sizing: padding-box;
+		-moz-box-sizing: padding-box;
+		-webkit-box-sizing: padding-box;
+		font-family: "Tahoma";
+		font-size: 0.75em;
+	}
+	
+	.inputSet
+	{
+		margin-bottom: 16px;
+	}
+	
+	#name
+	{
+		width: 50%;
+	}
+	
+	#questions
+	{
+		width: 75%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.question
+	{
+		display: block;
+		padding-bottom: 8px;
+		margin-bottom: 8px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+	}
+	
+	.question-header
+	{
+	}
+	
+	.question-body
+	{
+		font-weight: bold;
+	}
+	
+	.question-name
+	{
+		color: gray;
+	}
+	
+	.question-answer
+	{
+		font-style: italic;
+	}
+	
+	.button, .button span
+	{
+		display: inline-block;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+	}
+	
+	.button
+	{
+		white-space: nowrap;
+		line-height: 1em;
+		position: relative;
+		outline: none;
+		overflow: visible;
+		cursor: pointer;
+		border: 1px solid #999;
+		border: rgba(0, 0, 0, .2) 1px solid;
+		border-bottom: rgba(0, 0, 0, .4) 1px solid;
+		-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+		-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+		box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+		background: -moz-linear-gradient(
+			center top,
+			rgba(255, 255, 255, .1) 0%,
+			rgba(0, 0, 0, .1) 100%
+		);
+		background: -webkit-gradient(
+			linear,
+			center bottom,
+			center top,
+			from(rgba(0, 0, 0, .1)),
+			to(rgba(255, 255, 255, .1))
+		);
+		filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#19FFFFFF', EndColorStr='#19000000'); /* IE6,IE7 */
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#19FFFFFF', EndColorStr='#19000000')"; /* IE8 */
+		-moz-user-select: none;
+		-webkit-user-select:none;
+		-khtml-user-select: none;
+		user-select: none;
+		margin-bottom:10px;
+	}
+	
+	.button.full, .button.full span
+	{
+		display: block;
+	}
+	
+	.button:hover, .button.hover
+	{
+		background: -moz-linear-gradient(
+			center top,
+			rgba(255, 255, 255, .2) 0%,
+			rgba(255, 255, 255, .1) 100%
+		);
+		background: -webkit-gradient(
+			linear,
+			center bottom,
+			center top,
+			from(rgba(255, 255, 255, .1)),
+			to(rgba(255, 255, 255, .2))
+		);
+		filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#33FFFFFF', EndColorStr='#19FFFFFF'); /* IE6,IE7 */
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#33FFFFFF', EndColorStr='#19FFFFFF')"; /* IE8 */
+	}
+	
+	.button:active, .button.active
+	{
+		top: 1px;
+	}
+	
+	.button span
+	{
+		position: relative;
+		color: #fff;
+		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+		border-top: rgba(255, 255, 255, .2) 1px solid;
+		padding: 0.6em 1.3em;
+		line-height: 1em;
+		text-decoration: none;
+		text-align: center;
+		white-space: nowrap;
+		font-family: 'Simonetta', cursive;
+	}
+	
+	.button.small span
+	{
+		font-size: 12px;
+	}
+	
+	.button.medium span
+	{
+		font-size: 14px;
+	}
+	
+	.button.large span
+	{
+		font-size: 18px;
+	}
+	
+	.button.brown
+	{
+		background-color: #8e5704;
+	}
+	
+</style>
+
+<script>
+
+$('.error').hide();
+
+$("#submitQuestionButton").click(function() {
+	$('.error').hide();
+	
+	isValidInput = true;
+	
+	name = $("#name").val();
+	if (name == "") {
+		$("#nameError").show();
+		$("#name").focus();
+		isValidInput = false;
+	}
+	
+	inquiry = $("#inquiry").val();
+	if (inquiry == "") {
+		$("#inquiryError").show();
+		$("#inquiry").focus();
+		isValidInput = false;
+	}
+	
+	if (isValidInput)
+		submitQuestion(name, inquiry);
+	
+	return false;
+});
+
+function submitQuestion(name, inquiry) {
+	data = { "type":"question", "obj":{ "name":name, "content":inquiry } }
+	$.ajax({
+		type: "POST",
+		url: "php/bulletinboard.php",
+		processData: false,
+		contentType: 'application/json',
+		data: JSON.stringify(data),
+		success: function(response) {
+			var returnObj = jQuery.parseJSON(response);
+			var id = new Number(returnObj.id);
+			if (id > 0)
+				addQuestion(id, name, inquiry);
+		}
+	});
+}
+
+function addQuestion(id, name, inquiry, answer) {
+	var elementId = '' + id;
+	$("#questions").prepend(
+	'<div class="question" id="' + elementId + '">' +
+		'<div class="question-header">' +
+			'<div class="question-name">' +
+				name +
+			'</div>' +
+			'<div class="question-body">' +
+				inquiry +
+			'</div>' +
+		'</div>' +
+		(answer !== undefined ?
+		'<div class="question-answer">' +
+			answer +
+		'</div>' :
+		'') +
+	'</div>');
+	$('#' + elementId).hide();
+	$('#' + elementId).show(500);
+}
+
+$.getJSON('php/bulletinboard.php', function(data) {
+	$.each(data, function(key, question) {
+		id = question['id'];
+		name = question['name'];
+		inquiry = question['question'];
+		answer = question['answer'];
+		addQuestion(id, name, inquiry, answer);
+		$('.question').last().css('border', '0px');
+	});
+});
+</script>

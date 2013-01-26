@@ -1,0 +1,34 @@
+<div class="subtitle">
+	Photos
+</div>
+
+<div class="content-body">
+	<div id="photos_images">
+	</div>
+</div>
+
+<style media="screen" type="text/css">
+	.content-body
+	{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	#photos_images img
+	{
+		width: 270px;
+		margin: 16px;
+		vertical-align: middle;
+	}
+</style>
+
+<script>
+	$.getJSON('php/index.php', function(data) {
+		$.each(data, function(key, val) {
+			var filepath = 'images/' + val;
+			$('#photos_images').append('<img src="' + filepath + '"></img>');
+		});
+	});
+	
+</script>

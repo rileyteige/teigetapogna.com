@@ -1,0 +1,264 @@
+html *
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+html
+{
+	height: 100%;
+}
+
+body
+{
+	/*background-color: #FAAD55;*/
+	background-image: url('background.png');
+	font-family: 'Simonetta', cursive;
+	font-size: 1.1em;
+	box-shadow: inset 0px 0px 30px #000;
+	-moz-box-shadow: inset 0px 0px 30px #000;
+	-webkit-box-shadow: inset 0px 0px 30px #000;
+	min-height: 100%;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.20);
+}
+
+#layout-body
+{
+	padding-left: 64px;
+	padding-right: 64px;
+	padding-bottom: 64px;
+}
+
+.fancy
+{
+	font-family: 'Stalemate', cursive;
+}
+
+.layout-container
+{
+	border-radius: 15px;
+	box-shadow: 0px 0px 30px #000;
+    -moz-box-shadow: 0 0px 30px #000;
+    -webkit-box-shadow: 0 0px 30px #000;
+}
+
+.layout-section
+{/*
+	border-radius: 25px;
+	background-color: #F2FFB3;
+	box-shadow: 5px 5px 3px #4D3519;*/
+}
+
+ul.sidebar
+{
+	z-index: 0;
+	list-style: none;
+	margin-left: 0px;
+	margin-top: 41px;
+}
+
+ul.sidebar li
+{
+	z-index: 0;
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	float: left;
+	border-top: 1px solid #B07820;
+}
+
+ul.sidebar button
+{
+	text-align: left;
+	width: 160px;
+	background-color: transparent;
+	font-family: 'Simonetta', cursive;
+	font-size: 0.9em;
+	border: transparent;
+	cursor: pointer;
+	color: black;
+	display: block;
+	float: left;
+	padding: 4px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+ul.sidebar button:hover
+{
+	color: #A35A07;
+}
+
+button:active, button:focus
+{
+	outline: none;
+}
+
+button::-moz-focus-inner
+{
+	border: 0;
+}
+
+#header
+{
+	height: 80px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	text-shadow: #383838;
+	line-height: 2.3em;
+	font-size: 42px;
+	margin-bottom: 10px;
+}
+
+#links
+{
+	z-index: 0;
+	position: relative;
+	padding-top: 10px;
+	padding-right: 10px;
+	width: 170px;
+	float: left;
+}
+
+#content
+{
+	z-index: 2;
+	position: relative;
+	margin-left: 160px;
+	min-width: 595px;
+}
+
+#content img
+{
+	width: 320px;
+	height: auto;
+	box-shadow: 0px 0px 15px #000;
+	-moz-box-shadow: 0 0px 15px #000;
+	-webkit-box-shadow: 0 0px 15px #000;
+	border-radius: 10px;
+}
+
+.clear
+{
+	clear: both;
+}
+
+#links, #content, .content-body
+{
+	min-height: 320px;
+}
+
+.boxContainer
+{
+	height: auto;
+	display: table;
+	border-spacing: 4px;
+	margin-bottom: 8px;
+}
+
+.row
+{
+	display: table-row;
+	vertical-align: bottom;
+}
+
+.cell
+{
+	display: table-cell;
+	vertical-align: top;
+}
+
+.bio_info
+{
+	margin-top: 8px;
+	margin-right: 16px;
+	margin-bottom: 16px;
+	float: left;
+}
+
+.bio_text
+{
+}
+
+.left
+{
+	float: left;
+}
+
+.right
+{
+	float: right;
+}
+
+.subtitle
+{
+	background: #cc9d57; /* Old browsers */
+	background: -moz-linear-gradient(top,  #cc9d57 0%, #8e5704 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cc9d57), color-stop(100%,#8e5704)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #cc9d57 0%,#8e5704 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #cc9d57 0%,#8e5704 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #cc9d57 0%,#8e5704 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #cc9d57 0%,#8e5704 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc9d57', endColorstr='#8e5704',GradientType=0 ); /* IE6-9 */
+
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+/*	background-color: #B07820;*/
+	font-size: 1.4em;
+	padding: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	text-align: right;
+}
+
+.content-body
+{
+	padding: 24px;
+	background-color: #F2FFB3;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   speak for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 )
+                url('http://sampsonresume.com/labs/pIkfp.gif')
+                50% 50%
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
+
+fieldset
+{
+	border: 0px;
+}
+
+.error
+{
+	color: red;
+	font-size: 0.6em;
+	line-height: 0.6em;
+}

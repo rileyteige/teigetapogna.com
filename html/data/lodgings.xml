@@ -1,0 +1,115 @@
+<lodgings>
+	<lodging>
+		<name>Northstar Resort</name>
+		<url>http://www.northstarattahoe.com/info/ski/trip-planning/accommodations-overview.asp</url>
+		<image>http://www.northstarattahoe.com/nsbase/wrap/theme0/images/northstarLogo.png</image>
+		<phone>1.888.298.3156</phone>
+		<address>
+			<street>5001 Northstar Drive</street>
+			<city>Truckee</city>
+			<state>CA</state>
+			<zipCode>96161</zipCode>
+		</address>
+		<extras>
+			For the group rate code, you may contact Riley or Angela.
+		</extras>
+	</lodging>
+	
+	<lodging>
+		<name>Firelite Lodge</name>
+		<url>https://gc.synxis.com/rez.aspx?Hotel=23713&amp;Chain=9156</url>
+		<phone>1.800.934.7222</phone>
+		<directions>http://goo.gl/maps/58Pc6</directions>
+		<drive>15 minutes</drive>
+		<address>
+			<street>7035 North Lake Blvd</street>
+			<city>Tahoe Vista</city>
+			<state>CA</state>
+			<zipCode>96148</zipCode>
+		</address>
+	</lodging>
+	
+	<lodging>
+		<name>Cal Neva Resort, Spa &amp; Casino</name>
+		<url>https://gc.synxis.com/rez.aspx?Hotel=14173&amp;Chain=6272&amp;lang=1&amp;arrive=07%2F10%2F2013&amp;depart=07%2F13%2F2013&amp;adult=2&amp;rooms=1&amp;__utma=1.1083580792.1357190756.1357190756.1357190756.1&amp;__utmb=1.3.9.1357190866120&amp;__utmc=1&amp;__utmx=-&amp;__utmz=1.1357190756.1.1.utmcsr=%28direct%29|utmccn=%28direct%29|utmcmd=%28none%29&amp;__utmv=-&amp;__utmk=190600875</url>
+		<phone>1.800.225.6382</phone>
+		<directions>http://goo.gl/maps/HcjQj</directions>
+		<drive>16 minutes</drive>
+		<address>
+			<street>2 Stateline Road</street>
+			<city>Crystal Bay</city>
+			<state>NV</state>
+			<zipCode>89402</zipCode>
+		</address>
+	</lodging>
+	
+	<lodging>
+		<name>Tahoe City Inn</name>
+		<url>http://www.tahoecityinn.com/</url>
+		<phone>1.800.800.8246</phone>
+		<directions>http://goo.gl/maps/KLK03</directions>
+		<drive>27 minutes</drive>
+		<address>
+			<street>790 North Lake Boulevard</street>
+			<city>Tahoe City</city>
+			<state>CA</state>
+			<zipCode>96145</zipCode>
+		</address>
+	</lodging>
+	
+	<lodging>
+		<name>The Tahoe Sands Resort</name>
+		<url>http://www.tahoesandsresort.com/laketahoerentals.html</url>
+		<phone>530.546.2592</phone>
+		<directions>http://goo.gl/maps/cVMyq</directions>
+		<drive>14 minutes</drive>
+		<address>
+			<street>6610 North Lake Blvd</street>
+			<city>Tahoe Vista</city>
+			<state>CA</state>
+			<zipCode>96148</zipCode>
+		</address>
+	</lodging>
+	
+	<lodging>
+		<name>Sun 'N Sand Lodge</name>
+		<url>http://www.sunandsandlodge.com/specials</url>
+		<phone>1.800.547.2515</phone>
+		<directions>http://goo.gl/maps/C8QL0</directions>
+		<drive>13 minutes</drive>
+		<address>
+			<street>8308 North Lake Blvd</street>
+			<city>Kings Beach</city>
+			<state>CA</state>
+			<zipCode>96143</zipCode>
+		</address>
+	</lodging>
+	
+	<lodging>
+		<name>Lake of the Sky Inn</name>
+		<url>http://www.lakeoftheskyinn.com/</url>
+		<phone>530.583.3305</phone>
+		<directions>http://goo.gl/maps/A3pUM</directions>
+		<drive>26 minutes</drive>
+		<address>
+			<street>955 North Lake Blvd</street>
+			<city>Tahoe City</city>
+			<state>CA</state>
+			<zipCode>96145</zipCode>
+		</address>
+	</lodging>
+
+	<lodging>
+		<name>The Inn At Truckee</name>
+		<url>http://www.innattruckee.com/</url>
+		<phone>888.773.6888</phone>
+		<directions>http://goo.gl/maps/dmplJ</directions>
+		<drive>16 minutes</drive>
+		<address>
+			<street>11506 Deerfield Drive</street>
+			<city>Truckee</city>
+			<state>CA</state>
+			<zipCode>96161</zipCode>
+		</address>
+	</lodging>
+</lodgings>
