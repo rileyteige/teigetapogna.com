@@ -12,7 +12,7 @@ html
 body
 {
 	/*background-color: #FAAD55;*/
-	background-image: url('background.png');
+	background-image: url('../content/background.png');
 	font-family: 'Simonetta', cursive;
 	font-size: 1.1em;
 	box-shadow: inset 0px 0px 30px #000;

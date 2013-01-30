@@ -1,5 +1,5 @@
 <?php
-$lodgingsXml = simplexml_load_file('../data/lodgings.xml');
+$lodgingsXml = simplexml_load_file('../content/data/lodgings.xml');
 $lodgings = array();
 
 foreach($lodgingsXml as $lodging) {
