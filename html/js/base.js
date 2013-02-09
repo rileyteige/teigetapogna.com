@@ -31,12 +31,15 @@ function buildHeader() {
 function setupAnimations() {
 	var fast = 100 // milliseconds
 	var slow = 800
-	
-    $(".sidebar button").mouseover(function() {
-         $(this).stop().animate({ color:'#A35A07'}, fast);
-    }).mouseout(function() {
-        $(this).stop().animate({ color:'black'},slow);
-    });
+        
+    $("#links button").hover(
+    	function() {
+    		$(this).stop().animate({ 'color':'#A35A07' }, fast);
+    	},
+    	function() {
+    		$(this).stop().animate({ 'color':'black' }, slow);
+    	}
+    );
 }
 
 function hideLinksInit() {
