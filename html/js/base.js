@@ -53,6 +53,7 @@ var links = {
 		"story.html":"Our Story",
 		"photos.html":"Photos",
 		"bulletin.html":"Bulletin Board",
+		"registry.html":"Gift Registries",
 		"itinerary.html":"Itinerary",
 		"accomodations.html":"Accomodations"
 };

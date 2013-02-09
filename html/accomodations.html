@@ -74,6 +74,10 @@
 			'</tr>');
 	}
 
+	function replaceAll(txt, replace, new_text) {
+		return txt.replace(new RegExp(replace, 'g'), new_text);
+	}
+
 	$.getJSON('php/lodgings.php', function(data) {
 		$.each(data, function(key, lodging) {
 			name = lodging['name'];
@@ -81,9 +85,12 @@
 			imageUrl = lodging['image'];
 			phone = lodging['phone'];
 			address = lodging['address'];
-			extras = lodging['extras'];
+			extras = new String(lodging['extras']);
 			directions = lodging['directions'];
 			drive = lodging['drive'];
+			
+			extras = extras.replace(/[\[]+/g, '<');
+			extras = extras.replace(/[\]]+/g, '>');
 			
 			addRow(name, url, imageUrl, new Address(address['street'], address['city'], address['state'], address['zipCode']).toHtml(), directions, drive, phone, extras);
 		});
