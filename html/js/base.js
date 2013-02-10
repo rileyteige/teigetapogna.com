@@ -1,7 +1,7 @@
 var TITLE = "We're Gettin' Hitched!";
 var HEADER = 'Riley & Angie';
 
-$().ready(function(){
+$().ready(function(){	
 	buildTemplate();
 });
 
@@ -29,12 +29,11 @@ function buildHeader() {
 }
 
 function setupAnimations() {
-	var fast = 100 // milliseconds
 	var slow = 800
         
     $("#links button").hover(
     	function() {
-    		$(this).stop().animate({ 'color':'#A35A07' }, fast);
+    		$(this).stop().css({ 'color':'#A35A07' });
     	},
     	function() {
     		$(this).stop().animate({ 'color':'black' }, slow);
