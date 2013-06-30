@@ -1,7 +1,7 @@
 html *
 {
-	padding: 0px;
 	margin: 0px;
+	padding: 0px;
 }
 
 html
@@ -11,22 +11,22 @@ html
 
 body
 {
-	/*background-color: #FAAD55;*/
-	background-image: url('../content/background.png');
-	font-family: 'Simonetta', cursive;
-	font-size: 1.1em;
-	box-shadow: inset 0px 0px 30px #000;
-	-moz-box-shadow: inset 0px 0px 30px #000;
-	-webkit-box-shadow: inset 0px 0px 30px #000;
 	min-height: 100%;
+	/* background-color: #FAAD55; */
+	background-image: url('../content/background.png');
+	-webkit-box-shadow: inset 0px 0px 30px #000;
+	-moz-box-shadow: inset 0px 0px 30px #000;
+	box-shadow: inset 0px 0px 30px #000;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.20);
+	font-size: 1.1em;
+	font-family: 'Simonetta', cursive;
 }
 
 #layout-body
 {
-	padding-left: 64px;
 	padding-right: 64px;
 	padding-bottom: 64px;
+	padding-left: 64px;
 }
 
 .fancy
@@ -37,50 +37,47 @@ body
 .layout-container
 {
 	border-radius: 15px;
-	box-shadow: 0px 0px 30px #000;
-    -moz-box-shadow: 0 0px 30px #000;
     -webkit-box-shadow: 0 0px 30px #000;
+    -moz-box-shadow: 0 0px 30px #000;
+	box-shadow: 0px 0px 30px #000;
 }
 
 .layout-section
-{/*
-	border-radius: 25px;
-	background-color: #F2FFB3;
-	box-shadow: 5px 5px 3px #4D3519;*/
+{/* border-radius: 25px; *//* background-color: #F2FFB3; *//* box-shadow: 5px 5px 3px #4D3519; */
 }
 
 ul.sidebar
 {
 	z-index: 0;
-	list-style: none;
-	margin-left: 0px;
 	margin-top: 41px;
+	margin-left: 0px;
+	list-style: none;
 }
 
 ul.sidebar li
 {
-	z-index: 0;
-	margin: 0px;
-	padding: 0px;
 	display: block;
 	float: left;
-	border-top: 1px solid #B07820;
+	margin: 0px;
+	padding: 0px;
+	border-top: 1px solid #B07820;#E1B95E
+	z-index: 0;
 }
 
 ul.sidebar button
 {
-	text-align: left;
-	width: 160px;
-	background-color: transparent;
-	font-family: 'Simonetta', cursive;
-	font-size: 0.9em;
-	border: transparent;
-	cursor: pointer;
-	color: black;
 	display: block;
 	float: left;
 	padding: 4px;
+	width: 160px;
+	border: transparent;
+	background-color: transparent;
+	color: black;
+	text-align: left;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+	font-size: 0.9em;
+	font-family: 'Simonetta', cursive;
+	cursor: pointer;
 }
 
 button:active, button:focus
@@ -95,31 +92,31 @@ button::-moz-focus-inner
 
 #header
 {
-	height: 80px;
-	width: 50%;
-	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+	width: 50%;
+	height: 80px;
 	text-align: center;
 	text-shadow: #383838;
-	line-height: 2.3em;
 	font-size: 42px;
-	margin-bottom: 10px;
+	line-height: 2.3em;
 }
 
 #links
 {
-	z-index: 0;
 	position: relative;
+	z-index: 0;
+	float: left;
 	padding-top: 10px;
 	padding-right: 10px;
 	width: 170px;
-	float: left;
 }
 
 #content
 {
-	z-index: 2;
 	position: relative;
+	z-index: 2;
 	margin-left: 160px;
 	min-width: 595px;
 }
@@ -128,10 +125,10 @@ button::-moz-focus-inner
 {
 	width: 320px;
 	height: auto;
-	box-shadow: 0px 0px 15px #000;
-	-moz-box-shadow: 0 0px 15px #000;
-	-webkit-box-shadow: 0 0px 15px #000;
 	border-radius: 10px;
+	-webkit-box-shadow: 0 0px 15px #000;
+	-moz-box-shadow: 0 0px 15px #000;
+	box-shadow: 0px 0px 15px #000;
 }
 
 .clear
@@ -146,10 +143,10 @@ button::-moz-focus-inner
 
 .boxContainer
 {
-	height: auto;
 	display: table;
-	border-spacing: 4px;
 	margin-bottom: 8px;
+	height: auto;
+	border-spacing: 4px;
 }
 
 .row
@@ -166,10 +163,10 @@ button::-moz-focus-inner
 
 .bio_info
 {
+	float: left;
 	margin-top: 8px;
 	margin-right: 16px;
 	margin-bottom: 16px;
-	float: left;
 }
 
 .bio_text
@@ -188,6 +185,12 @@ button::-moz-focus-inner
 
 .subtitle
 {
+	padding: 10px;
+	padding-right: 30px;
+	padding-left: 30px;
+
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
 	background: #cc9d57; /* Old browsers */
 	background: -moz-linear-gradient(top,  #cc9d57 0%, #8e5704 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cc9d57), color-stop(100%,#8e5704)); /* Chrome,Safari4+ */
@@ -195,24 +198,18 @@ button::-moz-focus-inner
 	background: -o-linear-gradient(top,  #cc9d57 0%,#8e5704 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top,  #cc9d57 0%,#8e5704 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #cc9d57 0%,#8e5704 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc9d57', endColorstr='#8e5704',GradientType=0 ); /* IE6-9 */
-
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
-/*	background-color: #B07820;*/
-	font-size: 1.4em;
-	padding: 10px;
-	padding-left: 30px;
-	padding-right: 30px;
+/* background-color: #B07820; */
 	text-align: right;
+	font-size: 1.4em;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc9d57', endColorstr='#8e5704',GradientType=0 ); /* IE6-9 */
 }
 
 .content-body
 {
 	padding: 24px;
-	background-color: #F2FFB3;
-	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	background-color: #F2FFB3;
 }
 
 /* Start by setting display:none to make this hidden.
@@ -221,13 +218,13 @@ button::-moz-focus-inner
    speak for themselves. Background we set to 80% white with
    our animation centered, and no-repeating */
 .modal {
-    display:    none;
     position:   fixed;
-    z-index:    1000;
     top:        0;
     left:       0;
-    height:     100%;
+    z-index:    1000;
+    display:    none;
     width:      100%;
+    height:     100%;
     background: rgba( 255, 255, 255, .8 )
                 url('http://sampsonresume.com/labs/pIkfp.gif')
                 50% 50%
