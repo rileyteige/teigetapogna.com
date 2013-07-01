@@ -8,7 +8,7 @@
         <event>
             <title>Wedding Rehearsal</title>
             <time>4:00</time>
-            <location>TBD</location>
+            <location>Northstar</location>
         </event>
     </date>
 
@@ -21,12 +21,17 @@
         <event>
             <title>Wedding!</title>
             <time>4:00</time>
-            <location>Northstar</location>
+            <location>Northstar Overlook Pavilion</location>
+        </event>
+        <event>
+            <title>Cocktail Hour</title>
+            <time>5:00</time>
+            <location>Northstar Overlook Pavilion</location>
         </event>
         <event>
             <title>Reception</title>
             <time>6:00</time>
-            <location>Northstar</location>
+            <location>Northstar Overlook Pavilion</location>
         </event>
     </date>
 </itinerary>
