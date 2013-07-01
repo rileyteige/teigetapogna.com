@@ -1,3 +1,5 @@
+$darkOrange: #B07820;
+
 html *
 {
 	margin: 0px;
@@ -52,42 +54,40 @@ ul.sidebar
 	margin-top: 41px;
 	margin-left: 0px;
 	list-style: none;
-}
 
-ul.sidebar li
-{
-	display: block;
-	float: left;
-	margin: 0px;
-	padding: 0px;
-	border-top: 1px solid #B07820;#E1B95E
-	z-index: 0;
-}
+	li {
+		display: block;
+		float: left;
+		margin: 0px;
+		padding: 0px;
+		border-top: 1px solid $darkOrange;
+		z-index: 0;
+	}
 
-ul.sidebar button
-{
-	display: block;
-	float: left;
-	padding: 4px;
-	width: 160px;
-	border: transparent;
-	background-color: transparent;
-	color: black;
-	text-align: left;
-	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-	font-size: 0.9em;
-	font-family: 'Simonetta', cursive;
-	cursor: pointer;
-}
+	button {
+		display: block;
+		float: left;
+		padding: 4px;
+		width: 160px;
+		border: transparent;
+		background-color: transparent;
+		color: black;
+		text-align: left;
+		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+		font-size: 0.9em;
+		font-family: 'Simonetta', cursive;
+		cursor: pointer;
+	}
+};
 
-button:active, button:focus
-{
-	outline: none;
-}
+button {
+	&:active, &:focus {
+		outline: none;
+	}
 
-button::-moz-focus-inner
-{
-	border: 0;
+	&::-moz-focus-inner {
+		border: 0;
+	}
 }
 
 #header
@@ -119,16 +119,15 @@ button::-moz-focus-inner
 	z-index: 2;
 	margin-left: 160px;
 	min-width: 595px;
-}
 
-#content img
-{
-	width: 320px;
-	height: auto;
-	border-radius: 10px;
-	-webkit-box-shadow: 0 0px 15px #000;
-	-moz-box-shadow: 0 0px 15px #000;
-	box-shadow: 0px 0px 15px #000;
+	img {
+		width: 320px;
+		height: auto;
+		border-radius: 10px;
+		-webkit-box-shadow: 0 0px 15px #000;
+		-moz-box-shadow: 0 0px 15px #000;
+		box-shadow: 0px 0px 15px #000;
+	}
 }
 
 .clear
@@ -212,37 +211,6 @@ button::-moz-focus-inner
 	background-color: #F2FFB3;
 }
 
-/* Start by setting display:none to make this hidden.
-   Then we position it in relation to the viewport window
-   with position:fixed. Width, height, top and left speak
-   speak for themselves. Background we set to 80% white with
-   our animation centered, and no-repeating */
-.modal {
-    position:   fixed;
-    top:        0;
-    left:       0;
-    z-index:    1000;
-    display:    none;
-    width:      100%;
-    height:     100%;
-    background: rgba( 255, 255, 255, .8 )
-                url('http://sampsonresume.com/labs/pIkfp.gif')
-                50% 50%
-                no-repeat;
-}
-
-/* When the body has the loading class, we turn
-   the scrollbar off with overflow:hidden */
-body.loading {
-    overflow: hidden;   
-}
-
-/* Anytime the body has the loading class, our
-   modal element will be visible */
-body.loading .modal {
-    display: block;
-}
-
 fieldset
 {
 	border: 0px;
@@ -253,4 +221,41 @@ fieldset
 	color: red;
 	font-size: 0.6em;
 	line-height: 0.6em;
+}
+
+/* Lodgings */
+#lodgings {
+	border-spacing: 30px 10px;
+
+	a {
+		text-decoration: none;
+		font-weight: bold;
+		color: darken($darkOrange, 20%);
+	}
+
+	img {
+		box-shadow: none;
+		border-radius: 0px;
+		width: 200px;
+	}
+
+	td {
+		max-width: 300px;
+	}
+}
+
+/* Itinerary */
+#itinerary {
+	.grey {
+		color: #858585;
+	}
+
+	ul {
+		list-style: none;
+		margin-bottom: 32px;
+	}
+
+	li {
+		margin-left: 32px;
+	}
 }

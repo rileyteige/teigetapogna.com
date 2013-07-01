@@ -1,0 +1,32 @@
+<itinerary>
+    <date month="7" day="11" year="2013">
+        <event>
+            <title>Rehearsal Lunch</title>
+            <time>TBD</time>
+            <location>TBD</location>
+        </event>
+        <event>
+            <title>Wedding Rehearsal</title>
+            <time>4:00</time>
+            <location>TBD</location>
+        </event>
+    </date>
+
+    <date month="7" day="12" year="2013">
+        <event>
+            <title>Wedding Preparation</title>
+            <time>12:00</time>
+            <location>Northstar</location>
+        </event>
+        <event>
+            <title>Wedding!</title>
+            <time>4:00</time>
+            <location>Northstar</location>
+        </event>
+        <event>
+            <title>Reception</title>
+            <time>6:00</time>
+            <location>Northstar</location>
+        </event>
+    </date>
+</itinerary>

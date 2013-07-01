@@ -3,3 +3,7 @@ html/php/sql.php
 
 # pictures
 html/content/images/
+
+# SCSS data, compiled CSS
+html/css/style.css
+html/css/.sass-cache/
