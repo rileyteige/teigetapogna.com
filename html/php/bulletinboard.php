@@ -17,33 +17,33 @@ function postQuestion($name, $content) {
 	insert into Question(name, content)
 	values ('$name', '$content')
 	";
-	
+
 	$link->query($query);
-	
+
 	$maxset = $link->query("select max(id) as id from Question");
 	$max = $maxset->fetch_assoc();
-	
+
 	$link->close();
-	
+
 	return $max;
 }
 
 function postAnswer($id, $content) {
 	$link = getMySqlLink();
-	
+
 	$query = "
 	insert into Answer(id, content)
 	values ('$id', '$content')
 	";
-	
+
 	$link->query($query);
-	
+
 	$link->close();
 }
 
 function loadAllQuestions() {
 	$link = getMySqlLink();
-	
+
 	$query = "
 	select a.id, a.name, a.content as question, b.content as answer
 	from Question a
@@ -51,18 +51,18 @@ function loadAllQuestions() {
 	on a.id = b.id
 	order by a.id
 	";
-	
+
 	$questions = array();
-	
+
 	$result = $link->query($query);
-	while ($row = $result->fetch_assoc()) {		
+	while ($row = $result->fetch_assoc()) {
 		$id = $row['id'];
 		$name = $row['name'];
 		$question = $row['question'];
 		$answer = $row['answer'];
 		if ($answer == null)
 			$answer = '';
-		
+
 		array_push($questions, array( 'id' => $id,
 										'name' => $name,
 										'question' => $question,
@@ -70,9 +70,9 @@ function loadAllQuestions() {
 									)
 		);
 	}
-	
+
 	$link->close();
-	
+
 	return $questions;
 }
 
@@ -83,7 +83,7 @@ if ($request === 'POST') {
 	if ($body != null) {
 		$typeCheck = json_decode($body);
 		switch ($typeCheck->type) {
-		
+
 			/* posing a question */
 			case 'question': {
 				$inQuestion = $typeCheck->obj;
@@ -92,17 +92,17 @@ if ($request === 'POST') {
 						echo 'NULL NAME';
 						exit();
 					}
-					
+
 					if (isStringNullOrEmpty($inQuestion->content)) {
 						echo 'BAD CONTENT';
 						exit();
 					}
-					
+
 					$question = postQuestion($inQuestion->name, $inQuestion->content);
 					echo json_encode($question);
 				}
 			} break;
-		
+
 			/* answering a question */
 			case 'answer': {
 				$inAnswer = $typeCheck->obj;
@@ -111,16 +111,16 @@ if ($request === 'POST') {
 						echo 'BAD ANSWER ID';
 						exit();
 					}
-					
+
 					if (isStringNullOrEmpty($inAnswer->content)) {
 						echo 'BAD ANSWER CONTENT';
 						exit();
 					}
-					
+
 					postAnswer((int)$inAnswer->id, $inAnswer->content);
 				}
 			} break;
-		
+
 		}
 	}
 }

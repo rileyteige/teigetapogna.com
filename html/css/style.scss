@@ -24,6 +24,22 @@ body
 	font-family: 'Simonetta', cursive;
 }
 
+a {
+	text-decoration: none;
+	font-weight: bold;
+	color: darken($darkOrange, 20%);
+}
+
+button {
+	&:active, &:focus {
+		outline: none;
+	}
+
+	&::-moz-focus-inner {
+		border: 0;
+	}
+}
+
 #layout-body
 {
 	padding-right: 64px;
@@ -79,16 +95,6 @@ ul.sidebar
 		cursor: pointer;
 	}
 };
-
-button {
-	&:active, &:focus {
-		outline: none;
-	}
-
-	&::-moz-focus-inner {
-		border: 0;
-	}
-}
 
 #header
 {
@@ -223,15 +229,26 @@ fieldset
 	line-height: 0.6em;
 }
 
+/* Main page */
+#waterfall
+{
+	float: right;
+	margin-top: 8px;
+	margin-left: 16px;
+	margin-bottom: 16px;
+}
+
+#main_text
+{
+	p {
+		margin-top: 64px;
+		font-weight: bold;
+	}
+}
+
 /* Lodgings */
 #lodgings {
 	border-spacing: 30px 10px;
-
-	a {
-		text-decoration: none;
-		font-weight: bold;
-		color: darken($darkOrange, 20%);
-	}
 
 	img {
 		box-shadow: none;
@@ -257,5 +274,15 @@ fieldset
 
 	li {
 		margin-left: 32px;
+	}
+}
+
+/* Photos */
+#photos
+{
+	img {
+		width: 270px;
+		margin: 16px;
+		vertical-align: middle;
 	}
 }

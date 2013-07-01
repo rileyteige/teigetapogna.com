@@ -20,7 +20,7 @@
 	var addRow = function(name, url, imageUrl, address, directions, drive, phone, extras) {
 		htmlImage = null;
 		htmlImage = !(imageUrl == null || imageUrl === "") ? makeImage(imageUrl, url) : null;
-		$('#lodgingsTable').append('<tr>' +
+		$('#lodgings').append('<tr>' +
 			'<td>' +
 				makeLink(name, url) + '<br />' +
 				(htmlImage != null ? htmlImage + '<br />' : '') +
